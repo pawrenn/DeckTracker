@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-xs-12">
+    <img [src]="deck.imagePath" alt="{{deck.name}}" class="img-responsive" style="max-height: 300px">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{deck.name}}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary dropdown-toggle">Manage Deck <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Needed Cards</a></li>
+        <li><a href="#">Edit Decklist</a></li>
+        <li><a href="#">Delete Decklist</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    {{ deck.description }}
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    Cards
+  </div>
+</div>

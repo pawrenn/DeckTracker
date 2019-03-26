@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-xs-10">
+    <app-needed-edit (cardAdded)="onCardAdded($event)"></app-needed-edit>
+    <hr>
+    <ul class="list-group">
+      <a class="list-group-item clearfix" style="cursor: pointer" *ngFor="let card of cards">
+        {{ card.name }} - {{card.type}}
+        <span class="pull-right">
+          <img [src]="card.image" class="img-responsive" style="max-height: 50px;">
+        </span>
+      </a>
+    </ul>
+  </div>
+</div>

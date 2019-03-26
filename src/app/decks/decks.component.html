@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-5">
+    <app-decklist (deckWasSelected)="selectedDeck = $event"></app-decklist>
+  </div>
+  <div class="col-md-7">
+    <app-deck-detail *ngIf="selectedDeck; else infoText" [deck]="selectedDeck"></app-deck-detail>
+    <ng-template #infoText>
+      <p>Please select a Deck</p>
+    </ng-template>
+  </div>
+</div>
