@@ -9,6 +9,7 @@ import { DeckItemComponent } from './decks/decklist/deck-item/deck-item.componen
 import { NeededCardsComponent } from './needed-cards/needed-cards.component';
 import { NeededEditComponent } from './needed-cards/needed-edit/needed-edit.component';
 import { DecklistComponent } from './decks/decklist/decklist.component';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DecklistComponent } from './decks/decklist/decklist.component';
     DeckItemComponent,
     NeededCardsComponent,
     NeededEditComponent,
-    DecklistComponent
+    DecklistComponent,
+    DropdownDirective
     ],
   imports: [
     BrowserModule,
