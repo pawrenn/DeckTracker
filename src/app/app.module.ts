@@ -10,6 +10,7 @@ import { NeededCardsComponent } from './needed-cards/needed-cards.component';
 import { NeededEditComponent } from './needed-cards/needed-edit/needed-edit.component';
 import { DecklistComponent } from './decks/decklist/decklist.component';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { NeededCardsService } from './needed-cards/needed-cards.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { DropdownDirective } from './shared/dropdown.directive';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [NeededCardsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,7 @@
-import { Component, OnInit, ElementRef, ViewChild, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, } from '@angular/core';
 import { Card } from 'src/app/shared/card.model';
 import { OuterSubscriber } from 'rxjs/internal/OuterSubscriber';
+import { NeededCardsService } from '../needed-cards.service';
 
 @Component({
   selector: 'app-needed-edit',
@@ -11,9 +12,8 @@ export class NeededEditComponent implements OnInit {
   @ViewChild('nameInput') nameInputRef: ElementRef;
   @ViewChild('typeInput') typeInputRef: ElementRef;
   @ViewChild('imageInput') imageInputRef: ElementRef;
-  @Output() cardAdded = new EventEmitter<Card>();
 
-  constructor() { }
+  constructor(private neededCardService: NeededCardsService) { }
 
   ngOnInit() {
   }
@@ -22,6 +22,6 @@ export class NeededEditComponent implements OnInit {
     const cardType = this.typeInputRef.nativeElement.value;
     const cardImage = this.imageInputRef.nativeElement.value;
     const newCard = new Card(cardName, cardType, cardImage);
-    this.cardAdded.emit(newCard);
+    this.neededCardService.addCard(newCard);
   }
 }

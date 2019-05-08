@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Deck } from '../../deck.model';
+import { DeckService } from '../../deck.service';
 
 @Component({
   selector: 'app-deck-item',
@@ -8,14 +9,13 @@ import { Deck } from '../../deck.model';
 })
 export class DeckItemComponent implements OnInit {
   @Input() deck: Deck;
-  @Output() deckSelected = new EventEmitter<void>();
 
-  constructor() { }
+  constructor(private deckService: DeckService) { }
 
   ngOnInit() {
   }
 
   onSelected(){
-    this.deckSelected.emit();
+    this.deckService.deckSelected.emit(this.deck);
   }
 }
