@@ -3,12 +3,13 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-decks *ngIf="loadedFeature === 'decklist'">
+      <router-outlet></router-outlet>
+      <!-- <app-decks *ngIf="loadedFeature === 'decklist'">
         
       </app-decks>
       <app-needed-cards *ngIf="loadedFeature !== 'decklist'">
 
-      </app-needed-cards>
+      </app-needed-cards> -->
     </div>
   </div>
 </div>

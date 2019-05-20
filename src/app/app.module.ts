@@ -11,6 +11,13 @@ import { NeededEditComponent } from './needed-cards/needed-edit/needed-edit.comp
 import { DecklistComponent } from './decks/decklist/decklist.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { NeededCardsService } from './needed-cards/needed-cards.service';
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+  {path: '', component: DecksComponent},
+  {path: 'Decklists', component: DecksComponent},
+  {path: 'Needed-Cards', component: NeededCardsComponent}
+]
 
 @NgModule({
   declarations: [
@@ -26,7 +33,8 @@ import { NeededCardsService } from './needed-cards/needed-cards.service';
     ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [NeededCardsService],
   bootstrap: [AppComponent]

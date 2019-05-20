@@ -1,12 +1,12 @@
 <nav class="navbar navbar-default">
     <div class="contain-fluid">
         <div class=navbar-header>
-            <a href="#" class="navbar-brand">Deck Tracker</a>
+            <a routerLink="/" class="navbar-brand">Deck Tracker</a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#" (click)="onSelect('decklist')">Decklists</a></li>
-                <li><a href="#" (click)="onSelect('needed-cards')">Needed-Cards</a></li>
+                <li><a routerLink="/Decklists">Decklists</a></li>
+                <li><a routerLink="/Needed-Cards">Needed-Cards</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown" appDropdown>
